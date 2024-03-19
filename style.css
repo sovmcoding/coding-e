@@ -193,8 +193,7 @@ body{
 @media (max-width: 390px) {
     .side-content{
         padding: 0;
-        font-size: 15px;
-        word-break: break-word;
+        font-size: 80%;
     }
     .text-aside{
         flex-wrap: 1;
