@@ -1,0 +1,208 @@
+/* importo una fuente atractiva */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+/* variables */
+/* para crear una variable --nombre-variable- */
+/* para usar una variable luego de crearla:
+valor: var(--color-fondo); */
+:root {
+    --color-fondo: #EEEDEB;
+    --color-maqueta: #E0CCBE;
+    --color-letras-principales: #747264;
+    --color-hover-letrasP: #3C3633;
+    --color-fondo-boton: #E0CCBE; /* Por lo usual el mismo del fondo */
+    --color-borde-boton: #3C3633;
+    --color-hover-boton: #747264;
+    --color-boton: #3C3633;
+}
+
+
+
+/* doy estilo general */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+/* estilizo el cuerpo */
+body{
+    font-size: 1rem;
+    min-height: 100vh;
+    padding: 20px;
+    background-color: var(--color-fondo);
+}
+/* estilizo el layout */
+.layout > *{
+    box-shadow: 10px 6px 37px -13px rgba(51, 51, 51);
+    border-radius: 10px;
+    padding: 10px;
+    text-align: left;
+    font-weight: 500;
+    background-color: var(--color-maqueta);
+}
+
+/* empezamos */
+.layout{
+    display: grid;
+    grid-template-rows: 4rem  auto 50px;
+    grid-template-columns: 1fr 1fr 3fr 1fr;
+    grid-template-areas: 
+        "header navigation navigation navigation"
+        "main main main main"
+        "footer footer footer footer"
+    ;
+    grid-gap: 15px;
+}
+
+/* defino mis secciones para maquetar con grid template areas */
+.header-i{
+    grid-area: header;
+}
+.navbar{
+    grid-area: navigation;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-family: 'Poppins', sans-serif;
+    font-size: 90%;
+}
+.main{
+    grid-area: main;
+}
+.footer{
+    grid-area: footer;
+}
+.header-i{
+    font-size: xx-large;
+}
+.logo{
+    font-family: 'Poppins', sans-serif;
+    font-size: 90%;
+    text-decoration: none;
+    color: var(--color-letras-principales);
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    /* text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.7) ; */
+
+}
+.logo:hover{
+    color: var(--color-hover-letrasP);
+}
+.navbar a{
+    text-decoration: none;
+    margin: 1em;
+    margin-right: 2em;
+    padding: 0;
+    color: var(--color-letras-principales);
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    user-select: text;
+}
+.navbar a:hover,
+.navbar a.active{
+    color: var(--color-hover-letrasP);
+}
+.main{
+    display: flex;
+    flex-wrap: wrap;
+}
+.text-side{
+    flex: 1.5;
+    padding: 20px;
+    /* background-color: lightcoral; */
+    text-shadow: 1px 1px 8px black ;
+}
+
+.side-content{
+    padding: 60px;
+    align-items: center;
+}
+.side-content h1{
+    font-size: 4rem;
+}
+.side-content p{
+    padding-top: 45px;
+}
+
+/* .text-aside{
+    background-color: red;
+} */
+
+.text-aside{
+    /* max-width: 100%; */
+    flex: 1;
+    /* padding: 20px; */
+    /* background-color: lightgreen; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+.text-aside img{
+    margin-top: 2em;
+    margin-bottom: 0.5em;
+    max-width: 39%;
+    object-fit: contain;
+}
+
+.btn-aside{
+    padding: 0.5em;
+    font-size: 1.5rem;
+    border: solid;
+    border-radius: 5px;
+    border-color: var(--color-borde-boton);
+    cursor: pointer;
+    width: 5.5em;
+    background-color: var(--color-fondo-boton);
+    color: var(--color-boton);
+    margin: 10px;
+    text-shadow: 1px 1px 8px black ;
+
+}
+.btn-aside:hover{
+    transition: 1s;
+    background-color: var(--color-hover-boton);
+    border-color: var(--color-hover-boton);
+    color: #ffff;
+}
+/* .btn-aside:active{
+    background-color: #EBD9B4;
+    border: solid 3px #7E6363;
+} */
+
+.footer{
+    display: flex;
+    align-items: end;
+    justify-content: flex-end;
+    padding: 0;
+    color: ;
+}
+
+
+@media (max-width: 768px) {
+    .navbar{
+        word-break: break-word;
+    }
+    .navbar a{
+        margin-right: 0;
+        margin: 2px;
+    }
+}
+
+@media (max-width: 390px) {
+    .side-content{
+        padding: 0;
+        font-size: 15px;
+        word-break: break-word;
+    }
+    .text-aside{
+        flex-wrap: 1;
+        max-width: 100%;
+    }
+    .buttons-aside{
+        max-width: 100%;
+    }
+    .footer{
+        font-size: 80%;
+    }
+}
