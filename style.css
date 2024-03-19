@@ -38,7 +38,6 @@ body{
     text-align: left;
     font-weight: 500;
     background-color: var(--color-maqueta);
-    max-width: 100%;
 }
 
 /* empezamos */
@@ -108,13 +107,18 @@ body{
 }
 .text-side{
     flex: 1.5;
-    padding: 20px;
+    /* padding: 20px; */
     /* background-color: lightcoral; */
     text-shadow: 1px 1px 8px black ;
+    display: flex;
+    /* text-align: center; */
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
 }
 
 .side-content{
-    padding: 60px;
+    /* padding: 60px; */
     align-items: center;
 }
 .side-content h1{
@@ -176,7 +180,7 @@ body{
     align-items: end;
     justify-content: flex-end;
     padding: 0;
-    color: ;
+    /* color: ; */
 }
 
 
@@ -194,15 +198,19 @@ body{
     .side-content{
         padding: 0;
         font-size: 80%;
+        /* word-break: break-word; */
     }
     .text-aside{
         flex-wrap: 1;
-        max-width: 100%;
+        /* max-width: 100%; */
     }
     .buttons-aside{
         max-width: 100%;
     }
     .footer{
         font-size: 80%;
+    }
+    .text-side{
+        padding: ;
     }
 }
