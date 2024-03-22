@@ -1,4 +1,4 @@
-console.log("Estoy activo")
+console.log("Estoy activo con la traducción")
 const langEl = document.querySelector('.btns_translate')
 const link = document.querySelectorAll('.link_trans')
 const text = document.querySelector('.texto')
@@ -6,7 +6,8 @@ const tittle = document.querySelector('.me')
 
 
 link.forEach(el => {
-    el.addEventListener('click', () => {
+    el.addEventListener('click', (e) => {
+        e.preventDefault();
         // console.log('diste click a un boton de translate')
         langEl.querySelector('.active').classList.remove('active');
         el.classList.add('active');

@@ -22,7 +22,7 @@
   <nav class="navbar">
       <a href="" class="active" >Home</a>
       <a href="#about">Portfolio</a>
-      <a href="#contact" >Buy</a>
+      <a href="#" class="btn___contact">Buy</a>
   </nav>
 
   <main class="main">
@@ -37,10 +37,10 @@
       </div>
     </div>
     <div class="text-aside">
-      <img src="resources/imgs/face.png" alt="Logo HTML">
+      <img class="img_aside" src="resources/imgs/face.png" alt="Logo HTML">
       <div class="buttons-aside">
         <button class="btn-aside" id="btn-hireme">Hire me!</button>
-        <button class="btn-aside" id="btn-about">About</button>
+        <button class="btn-aside" id="btn-about btn___contact" onclick="contactando()">About</button>
       </div>
     </div>
 
@@ -50,6 +50,16 @@
     <p class="text-footer">todo esto fue hecho desde el codigo completamente desde 0. Todos los derechos reservados -Samuel Ovalle ®.</p>
   </footer>
 
+  <section class="contact_modal">
+    <div class="modal_container">
+      <img src="resources/imgs/quality-check-flatline.svg" alt="" class="img_modal">
+      <h2 class="title_modal">Buscas mi servicio?</h2>
+      <h3 class="subtitle_modal">contactame!</h3>
+      <input type="text">
+      <input type="email">
+      <a href="#" id="close_modal">soon/proximamente</a>
+    </div>
+  </section>
 </body>
 
 
@@ -58,6 +68,7 @@
 <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
 <!-- <script src="script.js"></script> -->
 <script src="scripts/trsl_db.js"></script>
+<script src="scripts/script.js"></script>
 
 
 </html>
