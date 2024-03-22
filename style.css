@@ -25,7 +25,7 @@ valor: var(--color-fondo); */
 }
 /* estilizo el cuerpo */
 body{
-    font-size: 1rem;
+    font-size: 16px;
     min-height: 100vh;
     padding: 20px;
     background-color: var(--color-fondo);
@@ -44,7 +44,7 @@ body{
 .layout{
     display: grid;
     grid-template-rows: 4rem  auto 50px;
-    grid-template-columns: 1fr 1fr 3fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-areas: 
         "header navigation navigation navigation"
         "main main main main"
@@ -76,7 +76,7 @@ body{
 }
 .logo{
     font-family: 'Poppins', sans-serif;
-    font-size: 90%;
+    font-size: 2rem;
     text-decoration: none;
     color: var(--color-letras-principales);
     font-weight: bold;
@@ -115,6 +115,37 @@ body{
     justify-content: center;
     align-items: center;
     padding: 1em;
+    flex-direction: column;
+}
+
+.btns_translate {
+    /* background-color: red; */
+    margin: 1.87rem 0;
+}
+
+.btns_translate a{
+    padding: 0 0.937rem;
+    font-weight: bold;
+    background: var(--color-fondo-boton);
+    color: var(--color-boton);
+    font-size: 1em;
+    border: 2px solid;
+    border-color: var(--color-borde-boton);
+    border-radius: 1rem;
+    text-decoration: none;
+}
+
+.btns_translate a:hover{
+    transition: 1s;
+    background-color: var(--color-hover-boton);
+    border-color: var(--color-hover-boton);
+    color: #ffff;
+}
+
+.btns_translate a.active{
+    background-color: var(--color-hover-boton);
+    border-color: var(--color-hover-boton);
+    color: #ffff;
 }
 
 .side-content{
@@ -181,18 +212,26 @@ body{
     justify-content: flex-end;
     padding: 0;
     /* color: ; */
+    /* background-color: red; */
+    height: 5vh;
+    margin-top: 2.18rem;
+    font-size: 14px;
 }
-/* .text-footer{
-} */
 
 
 @media (max-width: 768px) {
+    .layout{
+        font-size: 0.80rem;
+    }
     .navbar{
+        font-size: 12px;
         word-break: break-word;
+        max-height: 100%;
+        max-width: 100%;
     }
     .navbar a{
-        margin-right: 0;
-        margin: 2px;
+        margin: 1rem;
+        margin-right: 0.12rem;
     }
 }
 
@@ -210,6 +249,9 @@ body{
         max-width: 100%;
     }
     .footer{
-        font-size: 60%;
+        font-size: 8px;
+    }
+    .navbar{
+        font-size: 6px;
     }
 }
