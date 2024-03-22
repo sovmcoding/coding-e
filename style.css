@@ -254,4 +254,6 @@ body{
     .navbar{
         font-size: 6px;
     }
+    .navbar a{
+        margin-right: 0.5rem;
 }
