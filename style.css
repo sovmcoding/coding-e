@@ -32,7 +32,7 @@ body{
 }
 /* estilizo el layout */
 .layout > *{
-    box-shadow: 10px 6px 37px -13px rgba(51, 51, 51);
+    box-shadow: 10px 6px 37px -13px rgba(51, 51, 51, 1);
     border-radius: 10px;
     padding: 10px;
     text-align: left;
@@ -118,6 +118,17 @@ body{
     flex-direction: column;
 }
 
+.side-content{
+    /* padding: 60px; */
+    align-items: center;
+}
+.side-content h1{
+    font-size: 4rem;
+}
+.side-content p{
+    padding-top: 45px;
+}
+
 .btns_translate {
     /* background-color: red; */
     margin: 1.87rem 0;
@@ -148,16 +159,6 @@ body{
     color: #ffff;
 }
 
-.side-content{
-    /* padding: 60px; */
-    align-items: center;
-}
-.side-content h1{
-    font-size: 4rem;
-}
-.side-content p{
-    padding-top: 45px;
-}
 
 /* .text-aside{
     background-color: red;
@@ -219,6 +220,7 @@ body{
 }
 
 .contact_modal{
+    transition: opacity .4s ease-in-out;
     opacity: 0;
     pointer-events: none;
     position: fixed;
@@ -229,7 +231,6 @@ body{
     background-color: #111111bd;
     display: flex;
     overflow: auto;
-    transition: opacity 1s ease-in-out;
 }
 .contact_modal--show{
     opacity: 1;
@@ -239,24 +240,14 @@ body{
 .modal_container{
     padding: 1rem;
     border: 2px solid;
-    border-color: blue;
+    border-color: #ffff;
     border-radius: 15px;
-    background-color: #ffff;
+    box-shadow: 10px 6px 37px -13px rgba(255, 255, 255, 1);
+    background-color: rgba(0, 0, 0, .1);
+    backdrop-filter: blur(3px);
     margin: auto;
     width: 25%;
-    /* margin: auto;
-    width: 25rem;
-    height: 30rem;
-    max-height: 100%;
-    max-width: 90%;
-    border-radius: 6px;
-    padding: 1em 3em;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    align-items: center;
-    overflow: auto;
-    text-align: center; */
+    color: #ffff;
 }
 
 .title-modal{
@@ -271,28 +262,32 @@ body{
     height: 100%;
     /* background-color: navy; */
     height: 3.12rem;
-    margin: 2rem 0;
+    margin: 1rem 0;
     position: relative;
 }
 
+.inputdream{
+    height: 15rem;
+}
 
-
-.input-box input{
+.input-box input, .area{
     width: 100%;
     height: 100%;
     background-color: transparent;
     outline: none;
-    border: 2px solid rgba(0, 0, 0, .3);
+    border-color: #ffff;
     border-radius: 40px;
     padding-left: 15%;
+    color: #ffff;
 }
 
-/* .input-box box-icon{
-} */
-
-/* .input-box input::placeholder{
-    text-align: center;
-} */
+.area{
+    overflow: auto;
+    max-height: 100%;
+    max-width: 100%;
+    min-height: 70%;
+    min-width: 70%;
+}
 
 .modal_container .input-box i{
     position: absolute;
@@ -304,8 +299,6 @@ body{
     justify-content: center;
     margin-left: 5px;
 }
-
-
 
 @media (max-width: 768px) {
     .layout{
@@ -323,9 +316,6 @@ body{
     }
     .footer{
         font-size: 1em;
-    }
-    .input-box input{
-        width: 70%;
     }
 }
 
