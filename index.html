@@ -10,7 +10,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body class="layout">
@@ -40,7 +39,7 @@
       <img class="img_aside" src="resources/imgs/face.png" alt="Logo HTML">
       <div class="buttons-aside">
         <button class="btn-aside" id="btn-hireme" onclick="contactando()">Hire me!</button>
-        <button class="btn-aside" id="btn-about btn___contact">About</button>
+        <button class="btn-aside" id="btn-about btn___contact" >About</button>
       </div>
     </div>
 
@@ -52,12 +51,27 @@
 
   <section class="contact_modal">
     <div class="modal_container">
-      <img src="resources/imgs/quality-check-flatline.svg" alt="" class="img_modal">
-      <h2 class="title_modal">Buscas mi servicio?</h2>
-      <h3 class="subtitle_modal">contactame!</h3>
-      <input type="text">
-      <input type="email">
-      <a href="#" id="close_modal">soon/proximamente</a>
+      <h1 class="title-modal">Contact me!</h1>
+      <form action="">
+          <div class="input-box">
+            <i class="fa-solid fa-user"></i>
+            <input type="text" placeholder="username" required>
+          </div>
+          <div class="input-box">
+            <i class="fa-solid fa-envelope"></i>
+            <input type="email" placeholder="email" required>
+          </div>
+          <div class="input-box">
+            <i class="fa-solid fa-file-lines"></i>
+            <input type="text" placeholder="Web Dream" required>
+          </div>
+
+          <div class="rememb-forg">
+            <label for="rememb-forg"><input checked type="checkbox">Coming Soon</label>
+          </div>
+
+          <button type="submit" class="btn">contact</button>
+      </form>
     </div>
   </section>
 </body>
@@ -65,8 +79,7 @@
 
 
 
-<script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
-<!-- <script src="script.js"></script> -->
+<script src="https://kit.fontawesome.com/e909065406.js" crossorigin="anonymous"></script> 
 <script src="scripts/trsl_db.js"></script>
 <script src="scripts/script.js"></script>
 

@@ -196,7 +196,7 @@ body{
 
 }
 .btn-aside:hover{
-    transition: 1s;
+    /* transition: 1s; */
     background-color: var(--color-hover-boton);
     border-color: var(--color-hover-boton);
     color: #ffff;
@@ -228,41 +228,83 @@ body{
     bottom: 0;
     background-color: #111111bd;
     display: flex;
-    /* flex-direction: column; */
     overflow: auto;
+    transition: opacity 1s ease-in-out;
 }
-
 .contact_modal--show{
     opacity: 1;
     pointer-events: unset;
 }
 
-
-.img_modal{
-    width: 50%;
-    max-width: 250px;
-}
-
 .modal_container{
+    padding: 1rem;
+    border: 2px solid;
+    border-color: blue;
+    border-radius: 15px;
+    background-color: #ffff;
     margin: auto;
+    width: 25%;
+    /* margin: auto;
     width: 25rem;
     height: 30rem;
-    max-height: 90%;
+    max-height: 100%;
     max-width: 90%;
     border-radius: 6px;
     padding: 1em 3em;
-    background-color: #ffff;
-    display: grid;
-    gap: 0.5em;
-    place-items: center;
-    grid-auto-columns: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    overflow: auto;
+    text-align: center; */
 }
 
-.title_modal{
+.title-modal{
+    width: 100%;
+    text-align: center;
     font-size: 2rem;
-    word-break:normal;
     /* background-color: red; */
 }
+
+.input-box{
+    width: 100%;
+    height: 100%;
+    /* background-color: navy; */
+    height: 3.12rem;
+    margin: 2rem 0;
+    position: relative;
+}
+
+
+
+.input-box input{
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    outline: none;
+    border: 2px solid rgba(0, 0, 0, .3);
+    border-radius: 40px;
+    padding-left: 15%;
+}
+
+/* .input-box box-icon{
+} */
+
+/* .input-box input::placeholder{
+    text-align: center;
+} */
+
+.modal_container .input-box i{
+    position: absolute;
+    width: 30px;
+    height: 100%;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 5px;
+}
+
 
 
 @media (max-width: 768px) {
@@ -279,10 +321,14 @@ body{
         margin: 1rem;
         margin-right: 0.12rem;
     }
+    .footer{
+        font-size: 1em;
+    }
+    .input-box input{
+        width: 70%;
+    }
 }
-.footer{
-    font-size: 1em;
-}
+
 
 @media (max-width: 390px) {
     .side-content{
@@ -302,18 +348,5 @@ body{
     }
     .navbar{
         font-size: 6px;
-    }
-    .modal_container{
-        padding: 1em 0;
-        max-height: 100%;
-    }
-    .img_modal{
-        width: 30%;
-    }
-    .title_modal{
-        font-size: 2em;
-    }
-    .modal_container{
-        height: 100%;
     }
 }
