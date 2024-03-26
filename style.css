@@ -81,8 +81,6 @@ body{
     color: var(--color-letras-principales);
     font-weight: bold;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-    /* text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.7) ; */
-
 }
 .logo:hover{
     color: var(--color-hover-letrasP);
@@ -107,11 +105,8 @@ body{
 }
 .text-side{
     flex: 1.5;
-    /* padding: 20px; */
-    /* background-color: lightcoral; */
     text-shadow: 1px 1px 8px black ;
     display: flex;
-    /* text-align: center; */
     justify-content: center;
     align-items: center;
     padding: 1em;
@@ -119,7 +114,6 @@ body{
 }
 
 .side-content{
-    /* padding: 60px; */
     align-items: center;
 }
 .side-content h1{
@@ -130,7 +124,6 @@ body{
 }
 
 .btns_translate {
-    /* background-color: red; */
     margin: 1.87rem 0;
 }
 
@@ -160,15 +153,8 @@ body{
 }
 
 
-/* .text-aside{
-    background-color: red;
-} */
-
 .text-aside{
-    /* max-width: 100%; */
     flex: 1;
-    /* padding: 20px; */
-    /* background-color: lightgreen; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -197,23 +183,15 @@ body{
 
 }
 .btn-aside:hover{
-    /* transition: 1s; */
     background-color: var(--color-hover-boton);
     border-color: var(--color-hover-boton);
     color: #ffff;
 }
-/* .btn-aside:active{
-    background-color: #EBD9B4;
-    border: solid 3px #7E6363;
-} */
-
 .footer{
     display: flex;
     align-items: end;
     justify-content: flex-end;
     padding: 0;
-    /* color: ; */
-    /* background-color: red; */
     height: 5vh;
     margin-top: 2.18rem;
     font-size: 14px;
@@ -223,84 +201,98 @@ body{
     transition: opacity .4s ease-in-out;
     opacity: 0;
     pointer-events: none;
+    width: 100%;
+    height: 100%;
     position: fixed;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #111111bd;
-    display: flex;
+    background-color: #111111bd;    
     overflow: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    flex-wrap: wrap;
 }
+
 .contact_modal--show{
     opacity: 1;
     pointer-events: unset;
 }
 
 .modal_container{
-    padding: 1rem;
-    border: 2px solid;
-    border-color: #ffff;
-    border-radius: 15px;
-    box-shadow: 10px 6px 37px -13px rgba(255, 255, 255, 1);
-    background-color: rgba(0, 0, 0, .1);
-    backdrop-filter: blur(3px);
-    margin: auto;
-    width: 25%;
-    color: #ffff;
+    width: 100%;
+    max-width: 25rem;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
 }
 
-.title-modal{
-    width: 100%;
+.modal_container h1{
+    font-size: 3rem;
     text-align: center;
-    font-size: 2rem;
+}
+
+.modal_container form{
     /* background-color: red; */
 }
-
 .input-box{
-    width: 100%;
-    height: 100%;
-    /* background-color: navy; */
-    height: 3.12rem;
-    margin: 1rem 0;
+    /* background-color: blue; */
+    width: 310px;
+    margin: 30px 0;
+    border-bottom: 2px solid black;
     position: relative;
 }
 
-.inputdream{
-    height: 15rem;
-}
-
-.input-box input, .area{
-    width: 100%;
-    height: 100%;
-    background-color: transparent;
-    outline: none;
-    border-color: #ffff;
-    border-radius: 40px;
-    padding-left: 15%;
-    color: #ffff;
-}
-
-.area{
-    overflow: auto;
-    max-height: 100%;
-    max-width: 100%;
-    min-height: 70%;
-    min-width: 70%;
-}
-
-.modal_container .input-box i{
+.input-box label {
     position: absolute;
-    width: 30px;
-    height: 100%;
-    border-radius: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-left: 5px;
+    top: 50%;
+    left: 0.31rem;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: black;
+    pointer-events: none;
+    transition: .5s;
 }
 
-@media (max-width: 768px) {
+.input-box input:focus~label,
+.input-box input:valid~label {
+    top: -5px;
+}
+.input-box input:placeholder-shown{
+    opacity: 0;
+    transition: .2s;
+}
+.input-box input:focus:placeholder-shown{
+    opacity: 1;
+}
+
+.input-box input{
+    width: 100%;
+    height: 50px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: black;
+    padding: 0 25px 0 5px;
+}
+
+.input-box .icon{
+    position: absolute;
+    right: 8px;
+    color: black;
+    font-size: 1.2em;
+    line-height: 50px;
+}
+.dream .icon {
+    line-height: 100px;
+}
+
+
+@media screen and (max-width: 768px) {
     .layout{
         font-size: 0.80rem;
     }
@@ -320,15 +312,13 @@ body{
 }
 
 
-@media (max-width: 390px) {
+@media screen and (max-width: 390px) {
     .side-content{
         padding: 0;
         font-size: 80%;
-        /* word-break: break-word; */
     }
     .text-aside{
         flex-wrap: 1;
-        /* max-width: 100%; */
     }
     .buttons-aside{
         max-width: 100%;

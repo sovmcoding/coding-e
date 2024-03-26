@@ -8,7 +8,9 @@
   <title>sovm.</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -19,16 +21,21 @@
   </header>
 
   <nav class="navbar">
-      <a href="" class="active" >Home</a>
-      <a href="#about">Portfolio</a>
-      <a href="#" class="btn___contact">Buy</a>
+    <a href="" class="active">Home</a>
+    <a href="#about">Portfolio</a>
+    <a href="#" class="btn___contact">Buy</a>
   </nav>
 
   <main class="main">
     <div class="text-side">
       <section class="side-content">
         <h1 class="me">Hola, Soy Samuel</h1>
-        <p class="texto">mi nombre es Samuel, siempre me ha gustado mucho la informatica y desde muy pequeño he adquirido mucho conocimiento sobre este grandioso mundo. Desde que tengo memoria he sentido atracción por el lado de la programación y el como funciona un codigo, la logística y la cantidad de cosas que se pueden llegar a hacer con una linea de comandos. He dejado varias veces el ambito de programar por frustración, pero aquí esta mí mas grande avance hasta el día de hoy, luego de varios intentos, he logrado concluir muchos desiertos que he dejado en el pasado.</p>
+        <p class="texto">mi nombre es Samuel, siempre me ha gustado mucho la informatica y desde muy pequeño he
+          adquirido mucho conocimiento sobre este grandioso mundo. Desde que tengo memoria he sentido atracción por el
+          lado de la programación y el como funciona un codigo, la logística y la cantidad de cosas que se pueden llegar
+          a hacer con una linea de comandos. He dejado varias veces el ambito de programar por frustración, pero aquí
+          esta mí mas grande avance hasta el día de hoy, luego de varios intentos, he logrado concluir muchos desiertos
+          que he dejado en el pasado.</p>
       </section>
       <div class="btns_translate">
         <a href="#" language="spanish" class="active link_trans">ES</a>
@@ -39,46 +46,47 @@
       <img class="img_aside" src="resources/imgs/face.png" alt="Logo HTML">
       <div class="buttons-aside">
         <button class="btn-aside" id="btn-hireme" onclick="contactando()">Hire me!</button>
-        <button class="btn-aside" id="btn-about btn___contact" >About</button>
+        <button class="btn-aside" id="btn-about">About</button>
       </div>
     </div>
 
   </main>
 
   <footer class="footer">
-    <p class="text-footer">todo esto fue hecho desde el codigo completamente desde 0. Todos los derechos reservados -Samuel Ovalle ®.</p>
+    <p class="text-footer">todo esto fue hecho desde el codigo completamente desde 0. Todos los derechos reservados
+      -Samuel Ovalle ®.</p>
   </footer>
 
-  <section class="contact_modal">
+
+  <div class="contact_modal">
     <div class="modal_container">
-      <h1 class="title-modal">Contact me!</h1>
-      <form action="">
-          <div class="input-box">
-            <i class="fa-solid fa-user"></i>
-            <input type="text" placeholder="username" required>
-          </div>
-          <div class="input-box">
-            <i class="fa-solid fa-envelope"></i>
-            <input type="email" placeholder="email" required>
-          </div>
-          <div class="input-box inputdream">
-            <i for="area" class="fa-solid fa-file-lines"></i>
-            <textarea class="area" type="text" placeholder="Web Dream" required></textarea>
-          </div>
-
-          <div class="rememb-forg">
-            <label for="rememb-forg"><input checked type="checkbox">Coming Soon</label>
-          </div>
-
-          <button type="submit" class="btn">contact</button>
+      <form class="form-modal" action="">
+        <h1>Contact me!</h1>
+        <div class="input-box">
+          <span class="icon"><i class="fa-solid fa-envelope"></i></span>
+          <input type="email" required>
+          <label for="">Email</label>
+        </div>
+        <div class="input-box">
+          <span class="icon"><i class="fa-solid fa-user"></i></span>
+          <input type="text" required>
+          <label for="">User</label>
+        </div>
+        <div class="input-box">
+          <span class="icon"><i class="fa-solid fa-comment"></i></span>
+          <input type="text" required placeholder="(Informacion breve), Por correo Profundizamos">
+          <label for="">Your Vision</label>
+        </div>
+        <button type="submit">Contact</button>
       </form>
     </div>
-  </section>
+  </div>
+
 </body>
 
 
 
-<script src="https://kit.fontawesome.com/e909065406.js" crossorigin="anonymous"></script> 
+<script src="https://kit.fontawesome.com/e909065406.js" crossorigin="anonymous"></script>
 <script src="scripts/trsl_db.js"></script>
 <script src="scripts/script.js"></script>
 
