@@ -83,7 +83,7 @@ body{
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 .logo:hover{
-    color: var(--color-hover-letrasP);
+    color: blue;
 }
 .navbar a{
     text-decoration: none;
@@ -235,9 +235,9 @@ body{
     text-align: center;
 }
 
-.modal_container form{
-    /* background-color: red; */
-}
+/* .modal_container form{
+    background-color: red;
+} */
 .input-box{
     /* background-color: blue; */
     width: 310px;
