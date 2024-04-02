@@ -1,4 +1,4 @@
-const menu = document.getElementById('check')
+const menu = document.getElementById('check', 'close')
 const bar = document.querySelector('.nav-links')
 
 

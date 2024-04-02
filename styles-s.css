@@ -58,6 +58,9 @@ nav{ /* estilos para la navegación */
     color: var(--main);
     font-weight: 600;
 }
+.close{
+    display: none;
+}
 
 .link a::after{
     content: "";
@@ -334,25 +337,41 @@ section .header{
         display: flex;
     }
     .nav-links{
-        z-index: 100;
-        position: absolute;
-        top: 20%;
-        right: 40%;
         display: none;
         flex-direction: column;
-        gap: 1rem;
+        gap: 2rem;
         backdrop-filter: blur(3px);
         background-color: rgba(0, 3, 3, 0.5);
         padding: 1rem;
         border: 2px solid var(--third);
         border-radius: 10px;
-        width: 8rem;
-        height: 12rem;
+        width: 10rem;
+        height: 15rem;
+        z-index: 100;
+        position: fixed;
+        top: 6rem;
+        left: 0;
+        right: 0;
+        /* bottom: 0; */
+        margin: auto;
+    }
+    .close{
+        position: absolute;
+        bottom: 100%;
+        left: 100%;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 1.3rem;
+        color: var(--main);
+        display: unset;
+        opacity: .5;
+    }
+    .close:hover{
+        color: red;
     }
     .open {
         display: flex;
     }
-
     .nav-links a{
     padding-bottom: 0.4rem;
     }
