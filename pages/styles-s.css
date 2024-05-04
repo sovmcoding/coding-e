@@ -1,0 +1,388 @@
+:root {
+    --bg-color: rgb(0, 0, 0, 1);
+    --secondbg-color: #1d1d24;
+    --main: #B3A492;
+    --second: #BFB29E; 
+    --third: #D6C7AE;
+    --text-main: rgb(168, 161, 140) 
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+*{ /* Estilos generales */ 
+    padding: 0; /* borde interno */
+    margin: 0; /* margen externo */
+    border: none; /* borde */
+    box-sizing: border-box; /* estilo de cajas */
+}
+
+img{ /* estilo para las etiqueta img */
+    width: 100%; /* ancho */
+    display: flex; /* disposicion en cajas flexibles */
+}
+
+a{ /* estilo para los link (<a>) */
+    text-decoration: none; /* usualmente traen decoracion */
+
+}
+
+body{ /* contenedor de toda la pagina */
+    background-color: var(--bg-color); /* color del fondo */
+}
+body::-webkit-scrollbar {
+    background-color: transparent;
+    width: 10px;
+}
+body::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background: var(--main);
+    border: 2px solid var(--bg-color);
+}
+
+nav{ /* estilos para la navegación */
+    max-width: 1200px;
+    position: fixed;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    padding: 2rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    z-index: 100;
+    /* background-color: red; */
+}
+
+
+.nav-logo{
+    max-width: 3rem;
+}
+
+.nav-links{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+
+.link a{
+    position: relative;
+    padding-bottom: 0.75rem;
+    color: var(--main);
+    font-weight: 600;
+}
+/* .close{
+    display: none;
+} */
+
+.link a::after{
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 0;
+    bottom: 0;
+    left: 0;
+    background-color: var(--second);
+    transition: all 0.3s ease;
+}
+
+
+.link a:hover::after{
+    width: 70%;
+}
+
+.lan_btn{
+    margin-right: 1rem;
+}
+
+.burguer{
+    display: none;
+}
+
+.checkbtn{
+    font-size: 1.5rem;
+    color: var(--main);
+}
+
+#check{
+    display: none;
+}
+
+.btn{
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--main);
+    background-color: var(--bg-color);
+    border: 1px solid var(--second);
+    box-shadow: inset 0px 0px 10px 0px rgb(255, 255, 255),
+    0px 0px 10px 0px rgb(255, 255, 255);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn:hover{
+    transition: .5s;
+    background-color:var(--main);
+    scale: 110%;
+    color: var(--bg-color);
+}
+.container{
+    max-width: 1200px;
+    margin: 8rem auto 5%;
+    padding: 1rem 2rem;
+}
+
+.text-animation span{
+    position: relative;
+}
+
+.text-animation span::before{
+    content: "Web Developer";
+    color: var(--second);
+    animation: words 20s infinite;
+}
+
+.text-animation span::after{
+    content: "";
+    background-color: var(--bg-color);
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    border-left: 3px solid var(--bg-color);
+    right: -8px;
+    animation: cursor 0.8s infinite, typing 20s steps(14) infinite;
+}
+
+header{
+    position: relative;
+    padding-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 2rem;
+}
+
+header .content h4 {
+    margin-bottom: 1rem;
+    color: var(--text-main);
+    font-size: 1rem;
+}
+
+header .content h3{
+ margin-bottom: 1rem;
+ color: var(--text-main);
+ font-size: 1.5rem;
+}
+
+header .content h1{
+    color: var(--text-main);
+    margin-bottom: 1rem;
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 4rem;
+}
+
+header .content h1 span{
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px var(--main);
+}
+
+header .content p {
+    margin-bottom: 2rem;
+    color: var(--third);
+}
+
+header .image img{
+    max-width: 19rem;
+    margin: auto;
+
+}
+
+section .header{
+    margin-bottom: 1rem;
+    color: var(--main);
+    text-align: center;
+    font-size: 2.25rem;
+    font-weight: 600;
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    width: 50%;
+    margin: 4rem auto
+}
+
+
+.features .card{
+    background: var(--secondbg-color);
+    padding: 1rem;
+    border: 2px solid transparent;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+}
+
+.features .card:hover{
+    background-color: var(--bg-color);
+    border-color: var(--main);
+}
+
+.features .card span{
+    display: inline-block;
+    border: 2px solid var(--second);
+    border-radius: 52px;
+    padding: 6px 6px;
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+    color: var(--main);
+}
+
+.features .card h4{
+    margin-bottom: 0.5rem;
+    color: var(--main);
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+
+.features .card p{
+    color: var(--second);
+    margin-bottom: 1rem;
+}
+
+.features .card a{
+    color: var(--main);
+    transition: all 0.5s ease;
+}
+
+.features .card a:hover{
+    color: var(--third);
+}
+
+
+
+
+
+@keyframes cursor {
+    to{
+        border-left: 2px solid var(--third);
+    }
+}
+@keyframes words{
+    0%,
+    20%{
+        content: "Web Developer";
+    }
+    21%,
+    40%{
+        content: "Freelancer";
+    }
+    41%,
+    60%{
+        content: "Autodidact";
+    }
+    61%,
+    80%{
+        content: "Web Tester";
+    }
+    81%,
+    100%{
+        content: "Frontend Developer";
+    }
+}
+
+@keyframes typing{
+    10%,
+    15%,
+    30%,
+    35%,
+    50%,
+    55%,
+    70%,
+    75%,
+    90%,
+    95%{
+        width: 0;
+    }
+    5%,
+    20%,
+    25%,
+    40%,
+    45%,
+    60%,
+    65%,
+    80%,
+    85%{
+        width: calc(100% + 8px);
+    }
+}
+
+@media (width < 900px) {
+    header{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .btn{
+        padding: .8rem;
+    } 
+    .features{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media (width < 600px) {
+    .burguer{
+        display: flex;
+    }
+    .nav-links{
+        display: none;
+        flex-direction: column;
+        gap: 2rem;
+        backdrop-filter: blur(3px);
+        background-color: rgba(0, 3, 3, 0.5);
+        padding: 1rem;
+        border: 2px solid var(--third);
+        border-radius: 10px;
+        width: 10rem;
+        height: 15rem;
+        z-index: 100;
+        position: fixed;
+        top: 5rem;
+        left: 0;
+        right: 2rem;
+        /* bottom: 0; */
+        margin: auto;
+    }
+    .close{
+        position: absolute;
+        bottom: 100%;
+        left: 100%;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 1.3rem;
+        color: var(--main);
+        display: unset;
+        opacity: .5;
+    }
+    .close:hover{
+        color: red;
+    }
+    .open {
+        display: flex;
+    }
+    .nav-links a{
+    padding-bottom: 0.4rem;
+    }
+    .features{
+       /* width: 80%; */
+       /* height: 25rem; */
+       font-size: -10%;
+    }
+}
